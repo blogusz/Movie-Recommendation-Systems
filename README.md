@@ -160,11 +160,9 @@ Implements **three hybridization strategies**:
 
 ## 🚀 Quick Start
 
-### 1. Install Dependencies
+### 1. Python Version
 
-```bash
-pip install -r requirements.txt
-```
+**Tested and working on Python 3.11.5**
 
 ### 2. Download Datasets
 
