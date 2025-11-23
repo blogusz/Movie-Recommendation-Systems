@@ -10,6 +10,86 @@
 
 ---
 
+## 📖 Overview
+
+This project implements and analyzes **four major recommendation system techniques** using real-world movie datasets. Each approach is thoroughly documented with theory, implementation, and comparative analysis.
+
+**What makes this project unique:**
+
+- ✅ **Complete implementations** from scratch using industry-standard libraries
+- ✅ **Multiple datasets** (MovieLens, Netflix, TMDB, MyAnimeList) for robust validation
+- ✅ **Unified notebooks** combining theory, code, and analysis in one place
+- ✅ **Production-ready code** with detailed documentation and visualizations
+
+---
+
+## 🚀 Quick Start
+
+### 1. Python Version
+
+**Tested and working on Python 3.11.5**
+
+### 2. Download Datasets
+
+**Option A: Automatic Setup (Recommended)**
+
+```bash
+python setup_datasets.py
+```
+
+This automatically downloads and sets up all datasets (~9 GB total).
+
+**Option B: Manual Download**
+
+See [`setup_datasets.py`](setup_datasets.py) for detailed instructions and download links.
+
+**Note**: Kaggle datasets require a free Kaggle account. The setup script provides detailed instructions.
+
+### 3. Run Notebooks
+
+Each notebook is **self-contained** with:
+
+- 📚 Theoretical background with mathematical formulations
+- 🏗️ System architecture diagrams
+- 💻 Complete implementation with detailed comments
+- 📊 Results analysis with visualizations
+- 🔬 Comparative evaluation
+
+---
+
+## 📁 Project Structure
+
+```
+📦 Movie Recommendation Systems
+├── 📓 recommendation_techniques/
+│   ├── content_based_filtering.ipynb      # Theory + 3 experiments
+│   ├── collaborative_filtering.ipynb      # Theory + 6 experiments
+│   ├── knowledge_based.ipynb              # Theory + 2 methods
+│   └── hybrid_approaches.ipynb            # Theory + 3 hybrids
+├── 📊 datasets/                           # Download using setup_datasets.py
+│   ├── MovieLens/                         # 1M, 25M (with genome tags)
+│   ├── Netflix/                           # Netflix Shows + Prize dataset
+│   ├── TMDB/                              # Full TMDB 2024 dataset
+│   └── anime/                             # MyAnimeList dataset
+├── 🖼️ images/                             # Diagrams and architectures
+└── 🔧 setup_datasets.py                   # Automatic dataset downloader
+```
+
+---
+
+## 📚 Datasets Used
+
+| Dataset              | Size                     | Features                                  | Use Case              |
+| -------------------- | ------------------------ | ----------------------------------------- | --------------------- |
+| **MovieLens 25M**    | 25M ratings, 62K movies  | Ratings + genome tags (1,128 tags)        | CB, Hybrid            |
+| **MovieLens 1M**     | 1M ratings, 6K users     | User demographics + ratings               | CF (Memory & Model)   |
+| **Netflix (Titles)** | 8.8K titles              | Title, director, cast, country, genres    | CB (metadata-based)   |
+| **Netflix Prize**    | 100M ratings, 480K users | Ratings only                              | CF (large-scale)      |
+| **TMDB 2024**        | 10K movies               | Rich metadata (budget, revenue, keywords) | CB, KB                |
+| **MyAnimeList**      | 7.8M ratings, 12K anime  | Ratings + anime metadata                  | CF (different domain) |
+
+---
+
 ## 💡 Why Recommendation Systems?
 
 In today's digital age, **recommendation systems are everywhere**. From Netflix suggesting your next binge-watch to Spotify curating your perfect playlist, these systems shape how we discover content, products, and services. They solve a fundamental problem: **information overload** — helping users find what they need among millions of options.
@@ -39,19 +119,6 @@ Building effective recommendation systems requires addressing several critical c
 | **📊 Data Sparsity** | Most users rate only a tiny fraction of available items | Insufficient data for accurate predictions |
 
 **This project demonstrates** how different recommendation techniques address these challenges, with practical implementations showing their strengths and limitations.
-
----
-
-## 📖 Overview
-
-This project implements and analyzes **four major recommendation system techniques** using real-world movie datasets. Each approach is thoroughly documented with theory, implementation, and comparative analysis.
-
-**What makes this project unique:**
-
-- ✅ **Complete implementations** from scratch using industry-standard libraries
-- ✅ **Multiple datasets** (MovieLens, Netflix, TMDB, MyAnimeList) for robust validation
-- ✅ **Unified notebooks** combining theory, code, and analysis in one place
-- ✅ **Production-ready code** with detailed documentation and visualizations
 
 ---
 
@@ -137,61 +204,6 @@ Implements **three hybridization strategies**:
 
 ---
 
-## 📁 Project Structure
-
-```
-📦 Movie Recommendation Systems
-├── 📓 recommendation_techniques/
-│   ├── content_based_filtering.ipynb      # Theory + 3 experiments
-│   ├── collaborative_filtering.ipynb      # Theory + 6 experiments
-│   ├── knowledge_based.ipynb              # Theory + 2 methods
-│   └── hybrid_approaches.ipynb            # Theory + 3 hybrids
-├── 📊 datasets/                           # Download using setup_datasets.py
-│   ├── README.md                          # Dataset download instructions
-│   ├── MovieLens/                         # 1M, 25M (with genome tags)
-│   ├── Netflix/                           # Netflix Shows + Prize dataset
-│   ├── TMDB/                              # Full TMDB 2024 dataset
-│   └── anime/                             # MyAnimeList dataset
-├── 🖼️ images/                             # Diagrams and architectures
-└── 🔧 setup_datasets.py                   # Automatic dataset downloader
-```
-
----
-
-## 🚀 Quick Start
-
-### 1. Python Version
-
-**Tested and working on Python 3.11.5**
-
-### 2. Download Datasets
-
-**Option A: Automatic Setup (Recommended)**
-
-```bash
-python setup_datasets.py
-```
-
-This automatically downloads and sets up all datasets (~9 GB total).
-
-**Option B: Manual Download**
-
-See [`datasets/README.md`](datasets/README.md) for detailed instructions and download links.
-
-**Note**: Kaggle datasets require a free Kaggle account. The setup script provides detailed instructions.
-
-### 3. Run Notebooks
-
-Each notebook is **self-contained** with:
-
-- 📚 Theoretical background with mathematical formulations
-- 🏗️ System architecture diagrams
-- 💻 Complete implementation with detailed comments
-- 📊 Results analysis with visualizations
-- 🔬 Comparative evaluation
-
----
-
 ## 🎓 Key Takeaways
 
 1. **No single technique is best** — each has strengths for different scenarios
@@ -202,31 +214,12 @@ Each notebook is **self-contained** with:
 
 ---
 
-## 📚 Datasets Used
-
-| Dataset              | Size                     | Features                                  | Use Case              |
-| -------------------- | ------------------------ | ----------------------------------------- | --------------------- |
-| **MovieLens 25M**    | 25M ratings, 62K movies  | Ratings + genome tags (1,128 tags)        | CB, Hybrid            |
-| **MovieLens 1M**     | 1M ratings, 6K users     | User demographics + ratings               | CF (Memory & Model)   |
-| **Netflix (Titles)** | 8.8K titles              | Title, director, cast, country, genres    | CB (metadata-based)   |
-| **Netflix Prize**    | 100M ratings, 480K users | Ratings only                              | CF (large-scale)      |
-| **TMDB 2024**        | 10K movies               | Rich metadata (budget, revenue, keywords) | CB, KB                |
-| **MyAnimeList**      | 7.8M ratings, 12K anime  | Ratings + anime metadata                  | CF (different domain) |
-
----
-
 ## 🔮 Future Directions
 
 - 🧠 **Deep Learning**: Neural collaborative filtering, autoencoders
 - 🌐 **Context-Aware**: Time, location, device-based recommendations
 - 📊 **Advanced Metrics**: Diversity, novelty, serendipity, fairness
 - ⚡ **Real-Time Systems**: Online learning, A/B testing frameworks
-
----
-
-## 👨‍💻 Author
-
-Master's Thesis Project — _Use of methods based on user opinions for creating a movie recommendation system._
 
 ---
 
